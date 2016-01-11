@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.quickstart.steveh.accel12008quickstarttest" >
+    <!-- used to communicate with Skyhook's servers -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- used to enable Wi-Fi, if disabled, for the duration of a location request -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- used to obtain information about the Wi-Fi environment -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- used to obtain Wi-Fi or cellular based locations -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- used to access GPS location for hybrid location functionality -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- used to keep processor awake when receiving background updates -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- used to check network connection type to optimize performance -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- used to read skyhookLog.conf file for logging -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.skyhookwireless.accelerator.AcceleratorService"
+            android:exported="false" />
+    </application>
+
+</manifest>

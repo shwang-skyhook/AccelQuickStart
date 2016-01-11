@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/onCreate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/onRegister"
+        android:layout_below="@+id/onCreate"
+        android:layout_alignParentStart="true"
+        android:text="onRegister" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/onStartMonitoring"
+        android:layout_below="@+id/onRegister"
+        android:layout_alignParentStart="true"
+        android:text="onStartMonitoring" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fetchNearbyMonitoredVenues"
+        android:onClick="onFetchNearbyMonitoredVenuesClicked"
+        android:id="@+id/fetchNearbyMonitoredVenues"
+        android:layout_below="@+id/onStartMonitoring"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fetchVenueInfoAtLocation"
+        android:onClick="onFetchVenueInfoAtLocation"
+        android:id="@+id/fetchVenueInfoAtLocation"
+        android:layout_below="@+id/fetchNearbyMonitoredVenues"
+        android:layout_alignParentStart="true" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/monitoredVenues"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/fetchVenueInfoAtLocation" />
+
+</RelativeLayout>
